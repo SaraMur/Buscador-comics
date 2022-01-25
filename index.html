@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Buscador de Cómics</title>
+</head>
+<body>
+    <!---INICIO HEADER-->
+    <header>
+        <article class="hero">
+            <img class="image" src="img/Rick+And+Morty+Banner+copy.jpg" alt="Banner de Rick and Morty">
+        </article>
+    </header>
+    <!---FIN HEADER-->
+
+    <!---INICIO MAIN-->
+    <main>
+        <article class="container is-flex">
+            <button id="boton-buscar" class="button is-dark">
+                <span><i class="fas fa-search"></i></span>
+                <span>Buscar</span>
+            </button>
+            <input type="text" class="input">
+        </article>
+
+
+        <section id="container mb-5">
+                <div id="rootCard" class="columns is-flex-wrap-wrap"></div>
+        </section>
+        
+        <section id="pasarPaginas">
+            <button id="prev" class="button is-info is-medium">Anterior</button>
+            <button id="next" class="button is-info is-medium">Siguiente</button>
+        </section>
+    
+    
+
+    </main>
+    <!---FIN MAIN-->
+
+    <!---INICIO FOOTER-->
+    <footer>
+        <div class="footer">Hecho con ❤️ por Sara</div>
+    </footer>
+    <!---FIN FOOTER-->
+
+    <script src="index.js"></script>
+</body>
+</html>
