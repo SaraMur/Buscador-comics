@@ -1,0 +1,174 @@
+/*FONTS*/
+$font-openSans: 'Open Sans', sans-serif;
+
+/* MEASURES*/
+$min-measure: 5px;
+$universal-measure: 10px;
+$section-width: 100%;
+$input-width: 6em;
+$input-height: 1em;
+$border-radius-min: 5px;
+
+/* SPACES */
+$min-space: 20px;
+$previous-space:$universal-measure;
+
+/*COLOURS*/
+$color-fondo: #eee6ff;
+$purple: #330066;
+$almost-white:#f8f8f8;
+
+/*ELEMENTS***************/
+//BUTTONS
+@mixin button-purple{
+    font-family:  $font-openSans;
+    font-weight: 500;
+    background-color: $purple;
+    color: $almost-white;
+    border-radius: $border-radius-min;
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+}
+//TITLES//
+@mixin cards-title{
+    font-family: $font-openSans;
+    font-size: 0.7em;
+}
+/**************************************/
+
+//BODY********************************************************************************//
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #33373b;
+    border-radius: $border-radius-min;
+  }
+  html::-webkit-scrollbar {
+    width: 8px; /* Tamaño del scroll en vertical */
+    height: 8px; /* Tamaño del scroll en horizontal */
+  }
+
+//HEADER******************************************************************************//
+
+.header-container{
+    width: $section-width;
+    background-color: $color-fondo;
+}
+
+.image-header{
+    width: $section-width;
+}
+
+//MAIN******************************************************************************//
+//SEARCHING SECTION//
+main{
+    background-color: $color-fondo;
+}
+
+.container-search {
+ width: $input-width;
+}
+section {
+    margin-left: $min-space;
+    display: flex;
+    flex-direction: row;
+    padding: $previous-space;
+    flex-wrap: wrap;
+    form{
+        width: $section-width;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .input-title{
+            font-family:  'Architects Daughter', cursive;
+            color: #000033;
+        }
+
+        input{
+            height: 30px;
+            margin: $previous-space;
+            border-radius: $border-radius-min;
+        
+        }
+    }
+}
+
+.sort-by{
+    font-family: $font-openSans;
+    font-size: 1.4em;
+    border-radius: $border-radius-min;
+}
+
+/* #sort-by-az, #sort-by-za{
+    font-family: $font-openSans;
+    font-size: 0.7em;
+} */
+
+#search-button{
+    @include button-purple()
+}
+
+#search-icon{
+    font-size: 1.4em;
+}
+
+#search-text{
+    font-size: 1.4em;
+}
+
+//CARDS GALLERY//
+
+#rootCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include cards-title();
+}
+
+.cards-characters {
+    padding: $min-measure;
+    margin: $min-measure;
+    border: 1px solid rgb(204, 202, 202);
+    border-radius: $border-radius-min;
+    background-color: rgb(251, 251, 251);
+}
+
+span {
+    padding: 4px;
+}
+
+
+
+
+
+
+#turnPages {
+    display: flex;
+    justify-content: space-around;
+}
+#prev, #next{
+    @include button-purple()
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    padding: 0.7em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    background-color:#333366;
+    color: $almost-white;
+}
+
+
+////////////////////

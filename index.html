@@ -1,45 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-    <title>Buscador de Cómics</title>
+    
+    <title>Comics Search</title>
 </head>
 <body>
-    <!---INICIO HEADER-->
+    <!---START HEADER-->
     <header>
-        <article class="hero">
-            <img class="image" src="img/Rick+And+Morty+Banner+copy.jpg" alt="Banner de Rick and Morty">
+        <article class="header-container">
+            <img class="image-header" src="img/Rick+And+Morty+Banner+copy.jpg" alt="Banner de Rick and Morty">
         </article>
     </header>
-    <!---FIN HEADER-->
+    <!---END HEADER-->
 
-    <!---INICIO MAIN-->
+    <!---START MAIN-->
     <main>
-        <article class="container is-flex">
-            <button id="boton-buscar" class="button is-dark">
-                <span><i class="fas fa-search"></i></span>
-                <span>Buscar</span>
-            </button>
-            <input type="text" class="input">
-        </article>
+        <!--START SEARCH SECTION------------------------------------------>
+        <section class="container-search">
+           
+            <form id="form" type= "text"> 
+            <h2 class="input-title">CHARACTERS</h2>           
+            <input type="text" id="input">
+            <h2 class="input-title">SPECIES</h2>
+            <input type="text" id="inputSpecies">
+            
+                <select class="sort-by">
+                    <option id="sort-by-az">A-Z</option>
+                    <option id="sort-by-za">Z-A</option>
+                </select>
+            </form>
+            
 
+            <!--SEARCH BUTTON-->
+            <button id="search-button"  onclick="buscarPersonajes()">
+                <span id="search-icon"><i class="fas fa-search"></i></span>
+                <span id="search-text">Search</span>
+            </button>
+        </section>
+
+        <div id="card"></div>
 
         <section id="container mb-5">
-                <div id="rootCard" class="columns is-flex-wrap-wrap"></div>
+            <div id="rootCard" class="columns is-flex-wrap-wrap"></div>
         </section>
+
+        <!--PAGINATION-------------------------------------------------------->
+
         
-        <section id="pasarPaginas">
+        <section id="turnPages">
             <button id="prev" class="button is-info is-medium">Anterior</button>
             <button id="next" class="button is-info is-medium">Siguiente</button>
         </section>
-    
+        <!--FIN PAGINACION---------------------------------------------------->
+
     
 
     </main>

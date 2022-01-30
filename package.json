@@ -1,6 +1,26 @@
 {
   "dependencies": {
-    "bulma": "^0.9.3",
     "sass": "^1.49.0"
-  }
+  },
+  "name": "buscadorcomics-saramur",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "node-sass": "^7.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaraMur/Buscador-comics.git"
+  },
+  "author": "sara mur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaraMur/Buscador-comics/issues"
+  },
+  "homepage": "https://github.com/SaraMur/Buscador-comics#readme",
+  "description": ""
 }

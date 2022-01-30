@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/*FONTS*/
+/* MEASURES*/
+/* SPACES */
+/*COLOURS*/
+/*ELEMENTS***************/
+/**************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #33373b;
+  border-radius: 5px;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  /* Tamaño del scroll en vertical */
+  height: 8px;
+  /* Tamaño del scroll en horizontal */
+}
+
+.header-container {
+  width: 100%;
+  background-color: #eee6ff;
+}
+
+.image-header {
+  width: 100%;
+}
+
+main {
+  background-color: #eee6ff;
+}
+
+.container-search {
+  width: 6em;
+}
+
+section {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+section form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section form .input-title {
+  font-family: "Architects Daughter", cursive;
+  color: #000033;
+}
+section form input {
+  height: 30px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.sort-by {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4em;
+  border-radius: 5px;
+}
+
+/* #sort-by-az, #sort-by-za{
+    font-family: $font-openSans;
+    font-size: 0.7em;
+} */
+#search-button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  background-color: #330066;
+  color: #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+}
+
+#search-icon {
+  font-size: 1.4em;
+}
+
+#search-text {
+  font-size: 1.4em;
+}
+
+#rootCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7em;
+}
+
+.cards-characters {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #cccaca;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+}
+
+span {
+  padding: 4px;
+}
+
+#turnPages {
+  display: flex;
+  justify-content: space-around;
+}
+
+#prev, #next {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  background-color: #330066;
+  color: #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  padding: 0.7em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  background-color: #333366;
+  color: #f8f8f8;
+}
+
+/*# sourceMappingURL=style.css.map */
