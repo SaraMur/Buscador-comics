@@ -103,9 +103,13 @@ section form input {
 .cards-characters {
   padding: 5px;
   margin: 5px;
-  border: 1px solid #cccaca;
+  border: 1px solid #fbfbfb;
   border-radius: 5px;
   background-color: #fbfbfb;
+}
+.cards-characters:hover {
+  cursor: pointer;
+  -webkit-transform: scale(0.95);
 }
 
 span {
@@ -126,6 +130,10 @@ span {
   display: flex;
   flex-direction: row;
   padding: 4px;
+}
+#prev:hover, #next:hover {
+  cursor: pointer;
+  -webkit-transform: scale(0.95);
 }
 
 .footer {

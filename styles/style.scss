@@ -16,6 +16,7 @@ $previous-space:$universal-measure;
 /*COLOURS*/
 $color-fondo: #eee6ff;
 $purple: #330066;
+$purple-shadow: #6F6081;
 $almost-white:#f8f8f8;
 
 /*ELEMENTS***************/
@@ -35,6 +36,17 @@ $almost-white:#f8f8f8;
     font-family: $font-openSans;
     font-size: 0.7em;
 }
+
+//HOVERS
+@mixin box-shadows ($x-axis: 1px, $y-axis: 1px, $blur: 2px, $purple-shadow){}
+
+@mixin hovers {
+    cursor: pointer;
+    -webkit-transform:scale(0.95);
+}
+
+
+
 /**************************************/
 
 //BODY********************************************************************************//
@@ -130,15 +142,21 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     @include cards-title();
+
 }
 
 .cards-characters {
     padding: $min-measure;
     margin: $min-measure;
-    border: 1px solid rgb(204, 202, 202);
+    border: 1px solid rgb(251, 251, 251);
     border-radius: $border-radius-min;
     background-color: rgb(251, 251, 251);
+    &:hover{
+        @include hovers();
+      //  @include box-shadows($x-axis: 0, $y-axis: 5px, $blur: 5px, $purple-shadow);
+    }
 }
+//box-shadow: 0 5px 5px #6F6081, 6px 6px 6px #6F6081
 
 span {
     padding: 4px;
@@ -154,7 +172,11 @@ span {
     justify-content: space-around;
 }
 #prev, #next{
-    @include button-purple()
+    @include button-purple();
+    &:hover{
+        @include hovers ();
+
+    }
 
 }
 
