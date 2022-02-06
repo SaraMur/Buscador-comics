@@ -37,15 +37,15 @@
             <h2 class="input-title">SPECIES</h2>
             <input type="text" id="inputSpecies">
             
-                <select class="sort-by">
-                    <option id="sort-by-az">A-Z</option>
-                    <option id="sort-by-za">Z-A</option>
+                <select id="sort-by" class="sort-by">
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
                 </select>
             </form>
             
 
             <!--SEARCH BUTTON-->
-            <button id="search-button"  onclick="buscarPersonajes()">
+            <button id="search-button" onclick="buscarPersonajes()">
                 <span id="search-icon"><i class="fas fa-search"></i></span>
                 <span id="search-text">Search</span>
             </button>

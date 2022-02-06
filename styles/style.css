@@ -148,4 +148,12 @@ span {
   color: #f8f8f8;
 }
 
+.div-hidden {
+  display: none;
+}
+
+.div-block {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
