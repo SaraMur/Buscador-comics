@@ -39,7 +39,7 @@ const obtenerDataUbicacion = () =>{
 
 getDataCharacters()
 const getCharacterInfo = (id) => {
-    const divCardCharacterInfoHidden = document.querySelector("#char_" + `${curr.id}`)
+    const divCardCharacterInfoHidden = document.querySelector("#char_" + `${id}`)
     divCardCharacterInfoHidden.classList.toggle('div-block');
 }
 
@@ -49,9 +49,9 @@ const cardsCharacters = (data) => {
         <article class="cards-characters" onclick="getCharacterInfo(${curr.id})">
             <img src="${curr.image}">
             <h2>${curr.name}</h2>
-            <div id="char_'${curr.id}'" class="div-hidden">
+            <div id="char_${curr.id}" class="div-hidden">
                 <h3 class="curr-info">${curr.gender}</h3>
-                <h3 class="curr-info">${curr.origin}</h3>
+                <h3 class="curr-info">${curr.origin?.name}</h3>
                 <h3 class="curr-info">${curr.status}</h3>
             </div>
         </article>
